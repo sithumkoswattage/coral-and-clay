@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
+import DishDetailView from '../views/DishDetailView.vue'; // Import the new view
 
 const routes = [
   {
@@ -7,7 +8,11 @@ const routes = [
     name: 'home',
     component: HomeView
   },
-  // We will add the /dish/:id route later for the Detail View [cite: 22, 28]
+  {
+    path: '/dish/:id', // The :id acts as a variable
+    name: 'dish-detail',
+    component: DishDetailView
+  }
 ];
 
 const router = createRouter({
