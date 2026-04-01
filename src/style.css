@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui;
+}
+
+/* Enable class-based dark mode for Tailwind v4 */
+@variant dark (&:where(.dark, .dark *));
+
+/* Global transitions for professional UX [cite: 51] */
+body {
+  @apply bg-slate-50 text-slate-900 transition-colors duration-300 antialiased;
+}
+
+.dark body {
+  @apply bg-slate-900 text-slate-100;
+}
