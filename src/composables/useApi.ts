@@ -1,13 +1,16 @@
-// src/composables/useApi.ts
-import { ref } from 'vue';
+import { ref, computed } from 'vue'; // Import computed
 import axios from 'axios';
 import type { Recipe, RecipeResponse } from '../types/Recipe';
 
 export function useApi() {
   const recipes = ref<Recipe[]>([]);
-  const singleRecipe = ref<Recipe | null>(null); // New state for one dish
+  const singleRecipe = ref<Recipe | null>(null);
   const loading = ref(false);
   const error = ref<string | null>(null);
+  
+  // Search and Filter states
+  const searchQuery = ref('');
+  const selectedCategory = ref('All');
 
   const fetchRecipes = async () => {
     loading.value = true;
@@ -21,7 +24,15 @@ export function useApi() {
     }
   };
 
-  // New function for Detail View
+  // Logic to filter recipes based on search text and category 
+  const filteredRecipes = computed(() => {
+    return recipes.value.filter(recipe => {
+      const matchesSearch = recipe.name.toLowerCase().includes(searchQuery.value.toLowerCase());
+      const matchesCategory = selectedCategory.value === 'All' || recipe.cuisine === selectedCategory.value;
+      return matchesSearch && matchesCategory;
+    });
+  });
+
   const fetchRecipeById = async (id: string | number) => {
     loading.value = true;
     try {
@@ -34,5 +45,15 @@ export function useApi() {
     }
   };
 
-  return { recipes, singleRecipe, loading, error, fetchRecipes, fetchRecipeById };
+  return { 
+    recipes, 
+    filteredRecipes, 
+    searchQuery, 
+    selectedCategory, 
+    singleRecipe, 
+    loading, 
+    error, 
+    fetchRecipes, 
+    fetchRecipeById 
+  };
 }
