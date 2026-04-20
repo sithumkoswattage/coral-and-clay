@@ -100,11 +100,11 @@ const categories = ['All', 'Italian', 'Asian', 'Mexican', 'Indian', 'Pakistani',
       <!-- Search & Filter Bar -->
       <div class="flex flex-col md:flex-row gap-4 items-center justify-between bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-xl border border-slate-100 dark:border-slate-700 transition-colors mb-16">
         <div class="w-full md:w-2/3 relative">
-          <input v-model="searchQuery" type="text" placeholder="Search our menu..." class="w-full pl-12 pr-4 py-4 rounded-2xl border border-slate-200 dark:border-slate-600 focus:ring-2 focus:ring-warm-clay-600 outline-none dark:bg-slate-900 dark:text-white" />
+          <input v-model="searchQuery" type="text" placeholder="Search our menu..." class="w-full pl-12 pr-4 py-4 rounded-2xl border border-slate-200 dark:border-slate-600 focus:ring-2 focus:ring-warm-clay-600 outline-none dark:bg-slate-900 dark:text-white hover:shadow-md transition-all" />
           <span class="absolute left-4 top-4 text-xl opacity-40">🔍</span>
         </div>
         <div class="w-full md:w-1/3 flex items-center gap-3">
-          <select v-model="selectedCategory" class="w-full px-5 py-4 rounded-2xl border border-slate-200 dark:border-slate-600 focus:ring-2 focus:ring-warm-clay-600 outline-none dark:bg-slate-900 dark:text-white">
+          <select v-model="selectedCategory" class="w-full px-5 py-4 rounded-2xl border border-slate-200 dark:border-slate-600 focus:ring-2 focus:ring-warm-clay-600 outline-none dark:bg-slate-900 dark:text-white hover:shadow-md transition-all">
             <option v-for="cat in categories" :key="cat" :value="cat">{{ cat }}</option>
           </select>
         </div>
@@ -116,17 +116,17 @@ const categories = ['All', 'Italian', 'Asian', 'Mexican', 'Indian', 'Pakistani',
       </div>
 
       <div v-else-if="filteredRecipes.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        <div v-for="dish in filteredRecipes" :key="dish.id" class="group bg-white dark:bg-slate-800 rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100 dark:border-slate-700 flex flex-col">
+        <div v-for="dish in filteredRecipes" :key="dish.id" class="group bg-white dark:bg-slate-800 rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl hover:scale-105 transition-all duration-500 border border-slate-100 dark:border-slate-700 flex flex-col">
           <div class="h-64 overflow-hidden relative">
-            <img :src="dish.image" :alt="dish.name" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-            <div class="absolute bottom-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-bold text-orange-600 uppercase">{{ dish.cuisine }}</div>
+            <img :src="dish.image" :alt="dish.name" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+            <div class="absolute bottom-4 left-4 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-bold text-warm-clay-600 dark:text-warm-clay-400 uppercase">{{ dish.cuisine }}</div>
           </div>
           <div class="p-8 flex-grow flex flex-col">
             <div class="flex justify-between items-start mb-3">
               <h4 class="text-2xl font-extrabold text-slate-900 dark:text-white tracking-tight">{{ dish.name }}</h4>
               <span class="text-sm font-bold text-slate-600 dark:text-slate-400">⭐ {{ dish.rating }}</span>
             </div>
-            <router-link :to="{ name: 'dish-detail', params: { id: dish.id } }" class="mt-auto block w-full text-center py-4 bg-slate-900 dark:bg-orange-600 text-white rounded-2xl font-bold hover:bg-orange-600 transition-all">Explore Dish</router-link>
+            <router-link :to="{ name: 'dish-detail', params: { id: dish.id } }" class="mt-auto block w-full text-center py-4 bg-gradient-to-r from-warm-clay-600 to-warm-clay-500 text-white rounded-2xl font-bold hover:shadow-lg hover:shadow-warm-clay-500/40 active:scale-95 transition-all">Explore Dish</router-link>
           </div>
         </div>
       </div>

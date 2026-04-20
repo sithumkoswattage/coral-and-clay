@@ -33,11 +33,41 @@
 /* Enable class-based dark mode for Tailwind v4 */
 @variant dark (&:where(.dark, .dark *));
 
-/* Global transitions for professional UX [cite: 51] */
+/* Subtle animation keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gentle-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Global transitions for professional UX */
 body {
   @apply bg-slate-50 text-slate-900 transition-colors duration-300 antialiased;
 }
 
 .dark body {
   @apply bg-slate-900 text-slate-100;
+}
+
+/* Smooth transitions on interactive elements */
+button, a {
+  @apply transition-all duration-300;
+}
+
+input, select {
+  @apply transition-all duration-200;
 }
