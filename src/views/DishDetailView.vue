@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { onMounted } from 'vue';
+import { onMounted, inject } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { useApi } from '../composables/useApi';
 
 const route = useRoute();
 const router = useRouter();
 const { singleRecipe, loading, fetchRecipeById } = useApi();
+const handleBookTable = inject<() => void>('handleBookTable', () => {});
 
 onMounted(() => { fetchRecipeById(route.params.id as string); });
 </script>
@@ -35,7 +36,7 @@ onMounted(() => { fetchRecipeById(route.params.id as string); });
               <p class="text-xl font-bold text-slate-900 dark:text-white">{{ singleRecipe.cuisine }}</p>
             </div>
           </div>
-          <button class="w-full bg-slate-900 dark:bg-orange-600 text-white py-4 rounded-2xl font-bold hover:scale-[1.02] transition-transform">Book a Seaside Table</button>
+          <button @click="handleBookTable" class="w-full bg-gradient-to-r from-warm-clay-600 to-warm-clay-500 text-white py-4 rounded-2xl font-bold hover:shadow-lg hover:shadow-warm-clay-500/40 active:scale-95 transition-all">Book a Seaside Table</button>
         </div>
       </div>
     </div>

@@ -20,19 +20,7 @@ const categories = ['All', 'Italian', 'Asian', 'Mexican', 'Indian', 'Pakistani',
       </div>
     </header>
 
-    <section class="max-w-7xl mx-auto px-4 -mt-10 relative z-10">
-      <div class="flex flex-col md:flex-row gap-4 items-center justify-between bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-xl border border-slate-100 dark:border-slate-700 transition-colors">
-        <div class="w-full md:w-2/3 relative">
-          <input v-model="searchQuery" type="text" placeholder="Search our menu..." class="w-full pl-12 pr-4 py-4 rounded-2xl border border-slate-200 dark:border-slate-600 focus:ring-2 focus:ring-warm-clay-600 outline-none dark:bg-slate-900 dark:text-white" />
-          <span class="absolute left-4 top-4 text-xl opacity-40">🔍</span>
-        </div>
-        <div class="w-full md:w-1/3 flex items-center gap-3">
-          <select v-model="selectedCategory" class="w-full px-5 py-4 rounded-2xl border border-slate-200 dark:border-slate-600 focus:ring-2 focus:ring-warm-clay-600 outline-none dark:bg-slate-900 dark:text-white">
-            <option v-for="cat in categories" :key="cat" :value="cat">{{ cat }}</option>
-          </select>
-        </div>
-      </div>
-
+    <section class="max-w-7xl mx-auto px-4 relative z-10">
       <!-- Welcome Section -->
       <section class="mt-20 mb-16">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, provide } from 'vue';
 import NavBar from './components/NavBar.vue';
 import ReservationModal from './components/ReservationModal.vue';
 
@@ -24,6 +24,9 @@ const handleReservationSubmit = (data: ReservationData) => {
 const handleCloseModal = () => {
   showReservationModal.value = false;
 };
+
+// Provide handleBookTable to all child components
+provide('handleBookTable', handleBookTable);
 </script>
 
 <template>
