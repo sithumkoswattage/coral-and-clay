@@ -1,4 +1,4 @@
-import { ref, computed } from 'vue'; // Import computed
+import { ref, computed } from 'vue';
 import axios from 'axios';
 import type { Recipe, RecipeResponse } from '../types/Recipe';
 

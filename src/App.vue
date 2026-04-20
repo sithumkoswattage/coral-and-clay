@@ -18,14 +18,13 @@ const handleBookTable = () => {
 
 const handleReservationSubmit = (data: ReservationData) => {
   console.log('Reservation submitted:', data);
-  // Here you would typically send the data to your backend API
+  // TODO: Send reservation data to backend API
 };
 
 const handleCloseModal = () => {
   showReservationModal.value = false;
 };
 
-// Provide handleBookTable to all child components
 provide('handleBookTable', handleBookTable);
 </script>
 
