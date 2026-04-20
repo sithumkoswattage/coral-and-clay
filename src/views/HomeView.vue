@@ -23,51 +23,48 @@ const categories = ['All', 'Italian', 'Asian', 'Mexican', 'Indian', 'Pakistani',
     <section class="max-w-7xl mx-auto px-4 relative z-10">
       <!-- Welcome Section -->
       <section class="mt-20 mb-16">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
           <!-- Welcome Text -->
-          <div class="space-y-6">
-            <h2 class="text-4xl md:text-5xl font-serif font-bold text-slate-900 dark:text-warm-clay-50 leading-tight">
-              Welcome to <span class="text-warm-clay-600 dark:text-warm-clay-400">Tradition & Innovation</span>
+          <div class="md:col-span-2 space-y-5">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold text-slate-900 dark:text-warm-clay-50 leading-tight">
+              More Than a Meal
             </h2>
-            <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-              At Corral & Clay, we celebrate the rich culinary heritage of Sri Lanka while embracing global flavors. Every dish is carefully crafted with the finest local ingredients and international expertise, creating a dining experience that's both authentically rooted and beautifully refined.
+            <p class="text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+              At Corral & Clay, we believe dining is about creating memories. Our warm, welcoming atmosphere brings together the flavors of Sri Lanka with culinary traditions from around the world—all in a space designed for conversation, laughter, and connection.
             </p>
-            <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-              Whether you're craving the warmth of familiar spices or the excitement of bold new combinations, our menu invites you on a culinary journey that honors where we come from while exploring where we're going.
-            </p>
-            <div class="pt-4 flex flex-wrap gap-4">
+            <div class="pt-2 flex flex-wrap gap-6">
               <div class="flex items-start gap-3">
-                <span class="text-2xl">🌏</span>
+                <span class="text-3xl">💫</span>
                 <div>
-                  <h3 class="font-semibold text-slate-900 dark:text-white">Locally Sourced</h3>
-                  <p class="text-sm text-slate-600 dark:text-slate-400">Premium ingredients from trusted local suppliers</p>
+                  <h3 class="font-semibold text-slate-900 dark:text-white text-sm">Warm Hospitality</h3>
+                  <p class="text-xs text-slate-600 dark:text-slate-400">Every guest is family</p>
                 </div>
               </div>
               <div class="flex items-start gap-3">
-                <span class="text-2xl">👨‍🍳</span>
+                <span class="text-3xl">🍽️</span>
                 <div>
-                  <h3 class="font-semibold text-slate-900 dark:text-white">Expert Crafted</h3>
-                  <p class="text-sm text-slate-600 dark:text-slate-400">Prepared with passion and culinary mastery</p>
+                  <h3 class="font-semibold text-slate-900 dark:text-white text-sm">Authentic Flavors</h3>
+                  <p class="text-xs text-slate-600 dark:text-slate-400">Rooted in tradition</p>
                 </div>
               </div>
               <div class="flex items-start gap-3">
-                <span class="text-2xl">✨</span>
+                <span class="text-3xl">🌟</span>
                 <div>
-                  <h3 class="font-semibold text-slate-900 dark:text-white">Uniquely Ours</h3>
-                  <p class="text-sm text-slate-600 dark:text-slate-400">Signature flavors you won't find anywhere else</p>
+                  <h3 class="font-semibold text-slate-900 dark:text-white text-sm">Shared Moments</h3>
+                  <p class="text-xs text-slate-600 dark:text-slate-400">Creating memories</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Welcome Image -->
-          <div class="relative h-96 rounded-3xl overflow-hidden shadow-2xl">
+          <!-- Welcome Image - Supporting Role -->
+          <div class="relative h-72 rounded-2xl overflow-hidden shadow-lg">
             <img
-              src="https://images.unsplash.com/photo-1495521821757-a1efb6729352?q=80&w=2070"
-              alt="Chef preparing dishes"
+              src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=1470"
+              alt="Warm restaurant ambiance"
               class="w-full h-full object-cover"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-warm-clay-900/40 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-warm-clay-900/30 to-transparent"></div>
           </div>
         </div>
       </section>
