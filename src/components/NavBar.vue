@@ -1,6 +1,12 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
 
+interface Props {
+  onBookTable?: () => void;
+}
+
+defineProps<Props>();
+
 const isDark = ref(false);
 
 const toggleDarkMode = () => {
@@ -31,9 +37,17 @@ onMounted(() => {
       </router-link>
       
       <div class="flex items-center gap-6">
-        <router-link to="/" class="hidden md:block font-medium text-slate-600 dark:text-slate-300 hover:text-orange-600 transition-colors">
+        <router-link to="/" class="hidden md:block font-medium text-slate-600 dark:text-slate-300 hover:text-warm-clay-600 dark:hover:text-warm-clay-400 transition-colors">
           Menu
         </router-link>
+
+        <button
+          v-if="onBookTable"
+          @click="onBookTable"
+          class="hidden md:inline-block px-6 py-2.5 rounded-xl bg-gradient-to-r from-warm-clay-600 to-warm-clay-500 text-white font-semibold hover:shadow-lg hover:shadow-warm-clay-500/30 transition-all active:scale-95"
+        >
+          Book a Table
+        </button>
 
         <button @click="toggleDarkMode" class="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-xl hover:scale-110 active:scale-95 transition-all">
           {{ isDark ? '☀️' : '🌙' }}

@@ -1,7 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui;
+  --font-serif: "Playfair Display", serif;
+  
+  /* Warm-Clay Palette - Terracotta & Cream */
+  --color-warm-clay-50: #fdf7f1;
+  --color-warm-clay-100: #f9eddc;
+  --color-warm-clay-200: #f3d5b8;
+  --color-warm-clay-300: #e8b89c;
+  --color-warm-clay-400: #d9906b;
+  --color-warm-clay-500: #c86942;
+  --color-warm-clay-600: #b45309;
+  --color-warm-clay-700: #9c4408;
+  --color-warm-clay-800: #6b3004;
+  --color-warm-clay-900: #4a1f01;
+  
+  /* Deep-Ocean Blue */
+  --color-deep-ocean-50: #f0f7ff;
+  --color-deep-ocean-100: #e0efff;
+  --color-deep-ocean-200: #bae0ff;
+  --color-deep-ocean-300: #7cc3ff;
+  --color-deep-ocean-400: #36a6ff;
+  --color-deep-ocean-500: #0b7dff;
+  --color-deep-ocean-600: #0056d5;
+  --color-deep-ocean-700: #0044aa;
+  --color-deep-ocean-800: #003080;
+  --color-deep-ocean-900: #001a4d;
 }
 
 /* Enable class-based dark mode for Tailwind v4 */

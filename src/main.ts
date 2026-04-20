@@ -1,5 +1,5 @@
 import { createApp } from 'vue';
-import { createPinia } from 'pinia'; // For the Shopping Cart/Bookmarks bonus [cite: 27]
+import { createPinia } from 'pinia'; // For the Shopping Cart/Bookmarks bonus
 import './style.css';
 import App from './App.vue';
 import router from './router';

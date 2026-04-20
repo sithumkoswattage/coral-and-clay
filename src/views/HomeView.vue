@@ -11,11 +11,12 @@ const categories = ['All', 'Italian', 'Asian', 'Mexican', 'Indian', 'Pakistani',
 
 <template>
   <div class="min-h-screen pb-20 transition-colors duration-300">
-    <header class="relative h-[45vh] flex items-center justify-center bg-slate-900 text-white overflow-hidden">
-      <div class="absolute inset-0 opacity-40 bg-[url('https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=2070')] bg-cover bg-center"></div>
-      <div class="relative text-center px-4">
-        <h2 class="text-5xl md:text-6xl font-extrabold mb-4 tracking-tighter italic">Corral & Clay</h2>
-        <p class="text-xl text-slate-200 font-light max-w-xl mx-auto">Local Sri Lankan experience meets international culinary excellence.</p>
+    <header class="relative h-[45vh] flex items-center justify-center bg-warm-clay-800 text-white overflow-hidden">
+      <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=2070')] bg-cover bg-center"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-warm-clay-900/70 to-warm-clay-700/50"></div>
+      <div class="relative text-center px-4 z-10">
+        <h2 class="text-5xl md:text-6xl font-serif font-bold mb-4 tracking-wide">Corral & Clay</h2>
+        <p class="text-xl text-warm-clay-50 font-light max-w-xl mx-auto">Local Sri Lankan experience meets international culinary excellence.</p>
       </div>
     </header>
 
