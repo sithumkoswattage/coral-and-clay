@@ -16,7 +16,7 @@ const categories = ['All', 'Italian', 'Asian', 'Mexican', 'Indian', 'Pakistani',
       <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=2070')] bg-cover bg-center" style="animation: backgroundShimmer 4s ease-in-out infinite;"></div>
       <div class="absolute inset-0 bg-gradient-to-r from-warm-clay-900/70 to-warm-clay-700/50"></div>
       <div class="relative text-center px-4 z-10">
-        <h2 class="text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-3 sm:mb-4 tracking-wide" style="animation: titleShimmer 1s ease-out;">Corral & Clay</h2>
+        <h2 class="text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-3 sm:mb-4 tracking-wide" style="animation: titleShimmer 1s ease-out;">Coral & Clay</h2>
         <p class="text-base sm:text-lg md:text-xl text-warm-clay-50 font-light max-w-2xl mx-auto" style="animation: subtitleFade 1s ease-out 0.3s backwards;">Local Sri Lankan experience meets international culinary excellence.</p>
       </div>
     </header>
@@ -31,7 +31,7 @@ const categories = ['All', 'Italian', 'Asian', 'Mexican', 'Indian', 'Pakistani',
               More Than a Meal
             </h2>
             <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
-              At Corral & Clay, we believe dining is about creating memories. Our warm, welcoming atmosphere brings together the flavors of Sri Lanka with culinary traditions from around the world.
+              At Coral & Clay, we believe dining is about creating memories. Our warm, welcoming atmosphere brings together the flavors of Sri Lanka with culinary traditions from around the world.
             </p>
             <div class="pt-2 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
               <div class="flex items-start gap-3" style="animation: fadeInUp 0.8s ease-out 0.1s backwards;">

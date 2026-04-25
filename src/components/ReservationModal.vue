@@ -92,7 +92,7 @@ const handleClose = () => {
         <!-- Header -->
         <div class="bg-gradient-to-r from-warm-clay-600 to-warm-clay-500 p-6 text-white">
           <h2 class="text-2xl font-serif font-bold">Book a Table</h2>
-          <p class="text-warm-clay-100 text-sm mt-1">Reserve your spot at Corral & Clay</p>
+          <p class="text-warm-clay-100 text-sm mt-1">Reserve your spot at Coral & Clay</p>
         </div>
 
         <!-- Form -->

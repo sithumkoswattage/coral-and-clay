@@ -33,7 +33,7 @@ onMounted(() => {
   <nav class="bg-white/90 dark:bg-slate-900/90 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800 p-3 sm:p-4 transition-colors duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center">
       <router-link to="/" class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white tracking-tight">
-        Corral <span class="text-orange-600 font-medium">&</span> Clay
+        Coral <span class="text-orange-600 font-medium">&</span> Clay
       </router-link>
       
       <div class="flex items-center gap-3 sm:gap-6">
