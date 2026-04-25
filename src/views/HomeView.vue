@@ -99,6 +99,17 @@ const categories = ['All', 'Italian', 'Asian', 'Mexican', 'Indian', 'Pakistani',
       <div v-if="loading" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         <div v-for="i in 6" :key="i" class="animate-pulse bg-slate-200 dark:bg-slate-700 h-80 sm:h-96 rounded-2xl sm:rounded-3xl"></div>
       </div>
+      
+      <div v-else-if="error" class="mt-20 text-center px-4">
+        <div class="inline-block p-8 bg-red-50 dark:bg-red-900/20 border border-red-100 dark:border-red-800 rounded-3xl">
+          <span class="text-4xl">⚠️</span>
+          <h3 class="text-xl font-bold text-red-700 dark:text-red-400 mt-4">Failed to load the menu</h3>
+          <p class="text-red-600/70 dark:text-red-400/70 mt-2">{{ error }}</p>
+          <button @click="fetchRecipes" class="mt-6 px-6 py-2 bg-red-600 text-white rounded-xl font-bold hover:bg-red-700 transition-colors">
+          Try Again
+          </button>
+        </div>
+      </div>
 
       <div v-else-if="filteredRecipes.length > 0" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
         <div v-for="(dish, index) in filteredRecipes" :key="dish.id" class="group bg-white dark:bg-slate-800 rounded-2xl sm:rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-2xl hover:scale-105 transition-all duration-500 border border-slate-100 dark:border-slate-700 flex flex-col" :style="{ animation: `fadeInUp 0.6s ease-out ${index * 0.1}s backwards` }">
