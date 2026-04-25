@@ -4,5 +4,6 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/coral-and-clay/',
   plugins: [vue(), tailwindcss()],
 })
